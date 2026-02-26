@@ -1,7 +1,198 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hobbies & CODEX Work</title>
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at top left, #fefefe, #e2e8f0 60%);
+      color: #0f172a;
+      min-height: 100vh;
+    }
+    .content {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 24px 64px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    header h1 {
+      margin-bottom: 0.25rem;
+      font-size: clamp(2rem, 4vw, 2.6rem);
+    }
+    header p {
+      margin-top: 0;
+      color: #475467;
+      font-size: 1.125rem;
+    }
+    section {
+      background: #ffffffcc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 24px 28px;
+      box-shadow: 0 16px 35px -20px rgba(15, 23, 42, 0.4);
+    }
+    section h2 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: #0f172a;
+    }
+    ul {
+      margin: 0;
+      padding-left: 1.35rem;
+      color: #1e293b;
+    }
+    ol {
+      margin: 0;
+      padding-left: 1.35rem;
+      color: #1e293b;
+    }
+    code {
+      background: #e2e8f0;
+      border-radius: 6px;
+      padding: 1px 6px;
+      font-family: "Cascadia Code", Consolas, monospace;
+      font-size: 0.92em;
+    }
+    pre {
+      background: #0f172a;
+      color: #f8fafc;
+      border-radius: 12px;
+      padding: 14px;
+      overflow-x: auto;
+      font-family: "Cascadia Code", Consolas, monospace;
+      font-size: 0.86rem;
+      line-height: 1.5;
+    }
+    figure {
+      margin: 0;
+    }
+    figcaption {
+      margin-top: 8px;
+      color: #475467;
+      font-size: 0.9rem;
+    }
+    footer {
+      text-align: center;
+      padding: 12px 24px 32px;
+      font-size: 0.95rem;
+      color: #475467;
+    }
+    @media (max-width: 600px) {
+      .content {
+        padding: 32px 16px 48px;
+      }
+    }
+  </style>
+</head>
 <body>
-Hi WORLD
-  The 2026 blizzard has passed!  We survived!
-  Ruth made this change to the code!
+  <main class="content">
+    <header>
+      <h1>Hi WORLD</h1>
+      <p>The 2026 blizzard has passed, and we still have lots of energy for building.</p>
+    </header>
+
+    <section>
+      <h2>What I Love to Do</h2>
+      <p>Outside of day-to-day maintenance, I pour my hobby time into the projects that keep me curious and growing.</p>
+      <ul>
+        <li>Writing and refining CODEX development workflows so new features behave exactly as intended.</li>
+        <li>Exploring adjacent tools and libraries, from automation scripts to UI experiments.</li>
+        <li>Documenting lessons learned so teammates and future-me can move faster.</li>
+      </ul>
+    </section>
+
+  <section>
+    <h2>CODEX Development</h2>
+    <p>CODEX development is part imagination, part discipline. I enjoy sketching how prompts and instructions should interact, then validating them through careful testing.</p>
+    <p>When I’m not coding, I annotate design notes, capture edge cases, and coach others on leveraging the platform effectively.</p>
+  </section>
+
+  <section>
+    <h2>Other Interests</h2>
+    <p>Completing a good hike or reading a new book lets me return to the keyboard with fresh ideas.</p>
+  </section>
+
+  <section>
+    <h2>Learning CODEX in Antigravity</h2>
+    <p>In Antigravity I learned to use CODEX as my copilot to create the exact Python analysis and visualization I needed. I prompt it with the datasaurus file and iterate until the scatter plot code, data summaries, and export steps match my goals.</p>
+    <p>Having CODEX produce `analyze.py`, run it, and drop the resulting `dino_scatter.png` into this page is the kind of workflow that shows hiring managers I pair creative ideas with disciplined execution.</p>
+    <figure>
+      <img src="dino_scatter.png" alt="Datasaurus dino scatter plot" loading="lazy" style="width:100%;max-width:720px;border-radius:16px;border:1px solid #cbd5f5;box-shadow:0 12px 30px -18px rgba(15,23,42,0.6);" />
+      <figcaption>CODEX-driven Python analysis produced this scatter plot of the dino shape and now lives right on the site.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Technical Case Study: CODEX + MCP + Datawrapper API</h2>
+    <p>I approached this like a consulting-grade delivery: define the objective, generate code fast, validate assumptions, then iterate on API-level chart controls until the output matched spec. This workflow reflects how I learn new AI systems quickly and execute with precision under changing requirements.</p>
+    <p>The final pipeline was: filter the full dataset to the <code>dino</code> shape, generate a Python scatter plot, push the refined data into Datawrapper over MCP, explicitly map <code>x</code> and <code>y</code> axes, turn both grid lines off, publish, and export an image artifact for this site.</p>
+    <figure>
+      <img src="datawrapper_dino.png" alt="Published Datawrapper chart image generated via MCP" loading="lazy" style="width:100%;max-width:760px;border-radius:16px;border:1px solid #cbd5f5;box-shadow:0 12px 30px -18px rgba(15,23,42,0.6);" />
+      <figcaption>Published Datawrapper artifact generated from <code>datasaurus_dino.csv</code> with explicit x/y axis mapping via MCP.</figcaption>
+    </figure>
+    <p><strong>Target audience note:</strong> This project is intentionally framed for technical hiring managers at top-tier consulting firms evaluating analytical rigor, API fluency, and rapid experimentation discipline from candidates with strong academic backgrounds (including Harvard graduates).</p>
+  </section>
+
+  <section>
+    <h2>Prompt Log Used in This Build</h2>
+    <ol>
+      <li>add more content to my website. write about my hobbies such as CODEX development.</li>
+      <li>1</li>
+      <li>Do you have access to MCP server datawrapper-mcp?</li>
+      <li>analyze the data in datasaurus_all.csv and create a scatterplot of the shape "dino"</li>
+      <li>import dino_scatter.png into the site and write text describing how I learn to use CODEX in Antigravity to generate this python code. Showcase the power of me using CODEX on my website to impress hiring managers.</li>
+      <li>make a copy of datasaurus_all.csv called datasaurus_dino.csv which keeps the rows in which shape='dino'.</li>
+      <li>I want to use the Datawrapper API using the MPC server datawrapper-mcp to generate a new Datawrapper chart titled "A gentle t-rex figure made by CODEX using MCP". Send the data in datasaurus_dino.csv to Datawrapper.</li>
+      <li>retry</li>
+      <li>There was a mistake, set the variable x as the x-axis and variable y as the y-axis. Retry sending these instructions via the Datawrapper API to generate a new chart.</li>
+      <li>One more change, can you edit this chart to set Grid for Horizontal Axis and Vertical Axis to off? Then update this chart.</li>
+      <li>Looks great. Please publish this chart.</li>
+      <li>Download this chart as an image file and add it into my website. Write up a narrative describing what we did using CODEX, MCP, Datawrapper API to generate this chart. Make it sound technical to highlight my knack for learning new AI skills and tinkering until I get it write. Include all the prompts I used in this converation as well as the original dataset and the python code that were generated. Target this to a technical hiring manager at top tier consulting firm that is looking to hire Harvard graduates.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Artifacts and Generated Code</h2>
+    <ul>
+      <li>Original dataset: <a href="datasaurus_all.csv">datasaurus_all.csv</a></li>
+      <li>Filtered dataset sent to Datawrapper: <a href="datasaurus_dino.csv">datasaurus_dino.csv</a></li>
+      <li>Local Python-rendered plot: <a href="dino_scatter.png">dino_scatter.png</a></li>
+      <li>Published Datawrapper chart image: <a href="datawrapper_dino.png">datawrapper_dino.png</a></li>
+      <li>Datawrapper public chart: <a href="https://datawrapper.dwcdn.net/wOV53/" target="_blank" rel="noopener noreferrer">wOV53</a></li>
+    </ul>
+    <pre>analyze.py
+import matplotlib.pyplot as plt
+import pandas as pd
+from pathlib import Path
+
+df = pd.read_csv(Path("datasaurus_all.csv"))
+dino = df[df["shape"] == "dino"].copy()
+
+fig, ax = plt.subplots(constrained_layout=True)
+ax.scatter(dino["x"], dino["y"], s=36, c="#0f172a")
+ax.set_title("Datasaurus Dino")
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+ax.set_aspect("equal")
+fig.savefig("dino_scatter.png", dpi=200)</pre>
+    <pre>filter_dino.py
+import pandas as pd
+
+df = pd.read_csv("datasaurus_all.csv")
+dino = df[df["shape"] == "dino"]
+dino.to_csv("datasaurus_dino.csv", index=False)</pre>
+  </section>
+</main>
+
+  <footer>
+    <p>Ruth and the team keep the momentum going. Let me know if you want to collaborate!</p>
+  </footer>
 </body>
 </html>
